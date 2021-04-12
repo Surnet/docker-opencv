@@ -42,17 +42,19 @@ for version in \
       alpine*)
         os="alpine"
         template="Dockerfile-alpine.template"
-        replaceRules+="
+        replaceRules="
           s/%%IMAGE%%/$image/g;
           s/%%OPENCVVERSION%%/$version/g;
+          /%%END%%/d;
         "
       ;;
       *alpine*)
         os="alpine"
         template="Dockerfile-alpine.template"
-        replaceRules+="
+        replaceRules="
           s/%%IMAGE%%/$image/g;
           s/%%OPENCVVERSION%%/$version/g;
+          s/%%END%%/ENV OPENCV4NODEJS_DISABLE_AUTOBUILD=1/g;
         "
       ;;
       *)
