@@ -95,7 +95,7 @@ RUN set -ex \
   eigen-dev \
   linux-headers
 
-ENV OPENCV_LIB_DIR=/usr/local/lib64
+ENV OPENCV_LIB_DIR=/usr/local/lib
 ENV OPENCV_INCLUDE_DIR=/usr/local/include/opencv4
 ENV OPENCV_BIN_DIR=/usr/local/bin
 %%END%%
