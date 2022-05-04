@@ -83,6 +83,7 @@ RUN set -ex \
 # Clean up when done
 && rm -rf /opt/build/* \
 && rm -rf /opt/opencv-${OPENCV_VERSION} \
+&& rm -rf /opt/opencv_contrib-${OPENCV_VERSION} \
 && apk del --no-cache \
   build-base cmake \
   wget unzip \
