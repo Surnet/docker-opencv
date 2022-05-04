@@ -25,12 +25,20 @@ e.g. `surnet/alpine-node-opencv` or `surnet/alpine-opencv`
 
 The tags represent version numbers which follow the format:
 
-`<1>-<2>`
+`<1>-<2>-<3>`
 
 - `<1>` matches the version of the base image.
 - `<2>` matches the opencv version.
+- `<3>` matches the Edition (see next chapter).
 
-e.g. `14.16.0-4.5.1`
+e.g. `16.14.2-4.5.4-base`
+
+## Editions
+
+There are two editions available for each version.
+
+- `base` contains only opencv. This should be sufficient for most use-cases
+- `text` contains opencv and the module text from opencv_contrib.
 
 ## Available Images
 
