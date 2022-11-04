@@ -24,7 +24,7 @@ function docker_tag_exists() {
 
 # opencv versions
 for version in \
-  4.5.4 \
+  4.6.0 \
 ; do
   
   # edition small (opencv only) or full (with opencv_contrib)
@@ -35,8 +35,8 @@ for version in \
 
     # Supported base images
     for image in \
-      alpine:3.15.4 \
-      node:16.14.2-alpine3.15 \
+      alpine:3.16.2 \
+      node:18.12.0-alpine3.16 \
     ; do
       # Parse image string
       base="${image%%:*}"
