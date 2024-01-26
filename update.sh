@@ -19,12 +19,12 @@ function generated_warning() {
 }
 
 function docker_tag_exists() {
-  curl --silent -f -lSL https://index.docker.io/v1/repositories/$1/tags/$2 &> /dev/null
+  docker manifest inspect $1:$2 &> /dev/null && docker manifest inspect ghcr.io/$1:$2 &> /dev/null
 }
 
 # opencv versions
 for version in \
-  4.6.0 \
+  4.9.0 \
 ; do
   
   # edition small (opencv only) or full (with opencv_contrib)
@@ -35,8 +35,8 @@ for version in \
 
     # Supported base images
     for image in \
-      alpine:3.16.2 \
-      node:18.12.0-alpine3.16 \
+      alpine:3.19.0 \
+      node:20.11.0-alpine3.19 \
     ; do
       # Parse image string
       base="${image%%:*}"
