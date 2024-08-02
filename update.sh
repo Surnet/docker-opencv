@@ -35,8 +35,8 @@ for version in \
 
     # Supported base images
     for image in \
-      alpine:3.19.0 \
-      node:20.11.0-alpine3.19 \
+      alpine:3.20.2 \
+      node:20.16.0-alpine3.20 \
     ; do
       # Parse image string
       base="${image%%:*}"
