@@ -6,21 +6,18 @@ ENV OPENCV_VERSION=%%OPENCVVERSION%%
 
 # Install needed packages
 RUN set -ex \
-&& echo "@edge http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories \
-&& echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
-&& echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
 && apk add --no-cache \
   build-base cmake \
   wget unzip \
   hdf5 hdf5-dev \
   protobuf protobuf-dev \
-  openblas openblas-dev@community \
+  openblas openblas-dev \
   libjpeg libjpeg-turbo-dev \
   libpng libpng-dev \
   tiff tiff-dev \
   libwebp libwebp-dev \
   openjpeg openjpeg-dev openjpeg-tools \
-  libtbb@community libtbb-dev@community \
+  libtbb libtbb-dev \
   eigen eigen-dev \
   linux-headers \
 \
