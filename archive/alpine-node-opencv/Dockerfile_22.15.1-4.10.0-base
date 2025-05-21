@@ -1,8 +1,14 @@
+#
+# NOTE: THIS DOCKERFILE IS GENERATED VIA "update.sh"
+#
+# PLEASE DO NOT EDIT IT DIRECTLY.
+#
+
 # Image
-FROM %%IMAGE%%
+FROM node:22.15.1-alpine3.21
 
 # Environment variables
-ENV OPENCV_VERSION=%%OPENCVVERSION%%
+ENV OPENCV_VERSION=4.10.0
 
 # Install needed packages
 RUN set -ex \
@@ -95,4 +101,4 @@ RUN set -ex \
 ENV OPENCV_LIB_DIR=/usr/local/lib
 ENV OPENCV_INCLUDE_DIR=/usr/local/include/opencv4
 ENV OPENCV_BIN_DIR=/usr/local/bin
-%%END%%
+ENV OPENCV4NODEJS_DISABLE_AUTOBUILD=1
